@@ -1,0 +1,49 @@
+# AgentGate Configuration
+# Agent Authentication Service
+
+server:
+  host: "0.0.0.0"
+  port: 8000
+  cors_origins:
+    - "*"
+
+# JWT Configuration
+jwt:
+  algorithm: "HS256"
+  issuer: "agentgate"
+  default_expiry_seconds: 3600  # 1 hour
+  # Secret key (override with AGENTGATE_SECRET_KEY env var)
+  # secret_key: "change-me-in-production"
+
+# API Key Configuration
+api_keys:
+  prefix: "ag"
+  key_length: 32
+  default_expiry_days: null  # null = no expiry
+
+# Database Configuration
+database:
+  # Supabase connection (set via env vars)
+  # SUPABASE_URL: your-project.supabase.co
+  # SUPABASE_SERVICE_ROLE_KEY: your-service-role-key
+  provider: "supabase"
+
+# Rate Limiting
+rate_limit:
+  enabled: true
+  requests_per_minute: 100
+  burst: 20
+
+# Audit Logging
+audit:
+  enabled: true
+  log_successful_auth: true
+  log_failed_auth: true
+  retention_days: 90
+
+# Security
+security:
+  # Require HTTPS in production
+  require_https: false
+  # Allowed redirect URIs for OAuth
+  allowed_redirect_uris: []
