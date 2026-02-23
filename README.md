@@ -1,5 +1,12 @@
 # agentgate
 
+Production-grade project scaffold focused on reliability, maintainability, and fast onboarding.
+
+[![CI](https://img.shields.io/github/actions/workflow/status/yksanjo/agentgate/ci.yml?branch=main&label=ci)](https://github.com/yksanjo/agentgate/actions)
+![License](https://img.shields.io/github/license/yksanjo/agentgate)
+![Last Commit](https://img.shields.io/github/last-commit/yksanjo/agentgate)
+![Repo Size](https://img.shields.io/github/repo-size/yksanjo/agentgate)
+
 ## Detailed Description
 
 agentgate is maintained as an industry-grade software project with production-ready engineering practices.  
